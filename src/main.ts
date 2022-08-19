@@ -11,6 +11,7 @@ export class MyStack extends Stack {
       publicReadAccess: true,
     });
 
+    // Deployment
     new s3deploy.BucketDeployment(this, "DeployWebsite", {
       sources: [s3deploy.Source.asset("./public")],
       destinationBucket: websiteBucket,
